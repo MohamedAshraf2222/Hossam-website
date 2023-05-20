@@ -44,7 +44,7 @@ const Home = () => {
                 {/* <div className="border-top"></div> */}
                 <Card.Body>
                   <Card.Title>{item.title}</Card.Title>
-                  <Card.Text>{item.description}</Card.Text>
+                  {/* <Card.Text>{item.description}</Card.Text> */}
                   <Card.Text>ريال {item.price} </Card.Text>
                   <Button
                     variant="dark"
@@ -52,7 +52,7 @@ const Home = () => {
                       SetItem(item.id);
                       TotalPrice();
                     }}
-                    className="d-flex m-auto gap-2 justify-content-center align-items-center "
+                    className="d-flex mt-4 m-auto gap-2 justify-content-center align-items-center "
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -99,20 +99,22 @@ const Home = () => {
                 <Col className="calculator-heading">السعر</Col>
               </Row>
               {bagItems.map((item, i) => (
-              <Row className="calculator-details" key={i}>
-                <Col className="calculator-text">{item.title}</Col>
-                <Col className="calculator-text">{item.quantity}</Col>
-                <Col className="calculator-text">{item.price} ريال</Col>
-                {/* <p className="cart-text">
+                <Row className="calculator-details" key={i}>
+                  <Col className="calculator-text">{item.title}</Col>
+                  <Col className="calculator-text">{item.quantity}</Col>
+                  <Col className="calculator-text">{item.price} ريال</Col>
+                  {/* <p className="cart-text">
                   {item.title} = {item.price}
                 </p>
                 <p className="cart-text">{item.quantity} = العدد</p> */}
-              </Row>
+                </Row>
               ))}
             </>
           )}
 
-          <Row className="total-price-text border-top">مجموع الفاتورة : {totalPrice} &nbsp; ريال</Row>
+          <Row className="total-price-text border-top">
+            مجموع الفاتورة : {totalPrice} &nbsp; ريال
+          </Row>
         </Container>
       </div>
     </>

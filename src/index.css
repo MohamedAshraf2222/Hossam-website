@@ -51,6 +51,9 @@
 .card-title {
   font-weight: 600;
 }
+.mt-4{
+  margin-top: 3rem!important;
+}
 .card-body {
   background-color: #eaedf0;
 }
