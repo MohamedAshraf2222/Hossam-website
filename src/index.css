@@ -35,7 +35,8 @@
   object-fit: cover;
 }
 .bag-background {
-  background-color: #c4be99;
+  /* background-color: #c4be99; */
+  background-color: #eaedf0;
 }
 /* .border-top{
   border-top: #393839 solid 0px !important;
