@@ -44,7 +44,7 @@ export const BagContextProvider = (props) => {
     if (localStorage.getItem("BagItems")) {
       let bagData = JSON.parse(localStorage.getItem("BagItems"));
       for (let i = 0; i < bagData.length; i++) {
-        total = total + bagData[i].price * bagData[i].quantity;
+        total = total + bagData[i].price;
       }
       total = Math.round(total * 100) / 100;
       setTotalPrice(total);

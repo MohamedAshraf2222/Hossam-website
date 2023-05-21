@@ -37,10 +37,10 @@ const Home = () => {
     <>
       <NavbarCo />
       <Container fluid="" className="">
-        <h2 className="intro-heading">عرض سعر</h2>
-        <p className="intro-text">
-          شركة جرهرة العربي للصناعة عناية السيد علاء يوسف باشنفر
-        </p>
+        <h2 className="text-center intro-heading">عرض سعر</h2>
+        <p className="text-center intro-text">شركة جرهرة العربي للصناعة</p>
+        <p className="text-center intro-text">عناية السيد علاء يوسف باشنفر</p>
+
         <div className="d-flex my-4 flex-wrap gap-4 justify-content-center my-3">
           {allData.map((item, i) => (
             <Col
