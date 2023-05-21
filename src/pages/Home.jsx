@@ -161,7 +161,7 @@ const Home = () => {
               مجموع الفاتورة : {totalPrice} &nbsp; ريال
             </Row>
           ) : (
-            <h2 className="text-center my-5">لا يوجد خدمات مختارة</h2>
+            <h2 className="text-center py-5">لا يوجد خدمات مختارة</h2>
           )}
         </Container>
       </div>
