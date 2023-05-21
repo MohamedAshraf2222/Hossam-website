@@ -1,5 +1,6 @@
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState, useContext,useRef } from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import { check } from "../assets/index.js";
 import NavbarCo from "../components/Navbar.jsx";
 import { BagItemsContext } from "../context/Store.js";
 import { data } from "../data/data.js";
@@ -15,7 +16,19 @@ const Home = () => {
     }
     setAllData(data);
   }, []);
-
+  const btnRef = useRef(null)
+  const removeSuccess= ()=>{
+    btnRef.current.classList.remove('success')
+  }
+  const handlebtn= (e)=>{
+    console.log(e.classList);
+    document.getElementById('btn').classList.add('success');
+    btnRef.current.classList.add('success');
+    console.log(btnRef.current.classList);
+    setTimeout(() => {
+      removeSuccess();
+    }, 2000);
+  }
   // useEffect(() => {
   //   TotalPrice();
   // }, [SetItem]);
@@ -25,7 +38,14 @@ const Home = () => {
       <NavbarCo />
       <Container fluid="" className="">
         <h2 className="intro-heading">التعريف بالشركة</h2>
-        <p className="intro-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem dolor omnis quaerat voluptates sunt dolores eaque, vero veritatis assumenda accusantium ea sed explicabo esse quae ad debitis nam sequi recusandae maiores provident quos facere nulla doloribus. Atque libero consequuntur, eveniet incidunt sunt deserunt, esse quibusdam ipsam minus architecto, ab a!</p>
+        <p className="intro-text">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem
+          dolor omnis quaerat voluptates sunt dolores eaque, vero veritatis
+          assumenda accusantium ea sed explicabo esse quae ad debitis nam sequi
+          recusandae maiores provident quos facere nulla doloribus. Atque libero
+          consequuntur, eveniet incidunt sunt deserunt, esse quibusdam ipsam
+          minus architecto, ab a!
+        </p>
         <div className="d-flex my-4 flex-wrap gap-4 justify-content-center my-3">
           {allData.map((item, i) => (
             <Col
@@ -68,7 +88,18 @@ const Home = () => {
                       <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />{" "}
                     </svg>
                     شراء الخدمة
-                  </Button>
+                  </Button> 
+                  {/* <div className="position-relative button-wrapper"> */}
+                    {/* <button ref={btnRef} id='btn' onClick={(e)=>{handlebtn(e)}} class="button-animate-dev" href="#" role="button">
+                      <span>شراء الخدمة</span>
+                      <div class="icon">
+                      <p className="fa">X</p>
+                      <p className="fa-check">
+                        <img src={check} alt="" />
+                      </p>
+                      </div>
+                    </button> */}
+                  {/* </div> */}
                 </Card.Body>
               </Card>
               {/* </div> */}

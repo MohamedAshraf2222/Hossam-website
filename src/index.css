@@ -150,7 +150,7 @@
 }
 
 .btn-animation:active {
-  top: 2px;
+  top: 4px;
 }
 
 .intro-heading{
@@ -163,6 +163,115 @@
   font-size: 18px;
   line-height: 26px;
   margin-bottom: 40px;
+}
+
+/* @import url(//codepen.io/chrisdothtml/pen/ojLzJK.css); */
+/* Main Styles */
+.button-wrapper{
+  height: 36px;
+  width: 150px;
+  margin: auto;
+}
+.button-animate-dev {
+  border: none;
+  overflow: hidden !important;
+  display: block;
+  background-color: #393839;
+  width: 150px;
+  height: 36px;
+  /* line-height: 100px; */
+  margin: auto;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+}
+.button-animate-dev span,
+.button-animate-dev .icon {
+  overflow: hidden;
+  display: block;
+  height: 100%;
+  text-align: center;
+  position: absolute;
+  top: 0;
+}
+.button-animate-dev span {
+  width: 72%;
+  line-height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  text-transform: uppercase;
+  left: 0;
+  transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+}
+.button-animate-dev span:after {
+  content: "";
+  background-color: #000;
+  width: 2px;
+  height: 70%;
+  position: absolute;
+  top: 15%;
+  right: -1px;
+}
+.button-animate-dev .icon {
+  width: 28%;
+  right: 0;
+  transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-animate-dev .icon .fa {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  vertical-align: middle;
+  transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4), height 0.25s ease;
+}
+.button-animate-dev .icon .fa-remove {
+  height: 36px;
+}
+.button-animate-dev .icon .fa-check {
+  display: none;
+}
+.button-animate-dev.success span, .button-animate-dev:hover span {
+  left: -72%;
+  opacity: 0;
+}
+.button-animate-dev.success .icon, .button-animate-dev:hover .icon {
+  width: 100%;
+}
+.button-animate-dev.success .icon .fa, .button-animate-dev:hover .icon .fa {
+  font-size: 25px;
+}
+.button-animate-dev.success {
+  background-color: #27ae60;
+}
+.button-animate-dev.success .icon .fa-remove {
+  display: none;
+}
+.button-animate-dev.success .icon .fa-check {
+  display: inline-block;
+}
+.button-animate-dev:hover {
+  opacity: 0.9;
+}
+.button-animate-dev:hover .icon .fa-remove {
+  height: 46px;
+}
+.button-animate-dev:active {
+  opacity: 1;
 }
 
 .successfully-saved {

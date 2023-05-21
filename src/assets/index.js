@@ -16,6 +16,7 @@ import service15 from "./كرت-الاعمال.jpg";
 import service16 from "./لوحة-خارجية.jpg";
 import service17 from "./مذكرة.jpg";
 import service18 from "./هدايا-دعائية.jpg";
+import check from "./check-icon.png";
 
 export {
   service1,
@@ -36,4 +37,5 @@ export {
   service16,
   service17,
   service18,
+  check
 };
