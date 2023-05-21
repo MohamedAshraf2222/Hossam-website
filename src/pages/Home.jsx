@@ -128,14 +128,14 @@ const Home = () => {
             <>
               <Row className="border-bottom">
                 <Col className="calculator-heading">المنتج</Col>
-                <Col className="calculator-heading">الكمية</Col>
+                {/* <Col className="calculator-heading">الكمية</Col> */}
                 <Col className="calculator-heading">السعر</Col>
                 <Col className="calculator-heading">حذف</Col>
               </Row>
               {bagItems.map((item, i) => (
                 <Row className="calculator-details" key={i}>
                   <Col className="calculator-text">{item.title}</Col>
-                  <Col className="calculator-text">{item.quantity}</Col>
+                  {/* <Col className="calculator-text">{item.quantity}</Col> */}
                   <Col className="calculator-text">{item.price} ريال</Col>
                   <Col className="calculator-text">
                     <Button
