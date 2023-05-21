@@ -52,13 +52,17 @@
   font-weight: 600;
 }
 .mt-4{
-  margin-top: 3rem!important;
+  margin: 0!important;
 }
 .card-body {
+  height: 198px;
   background-color: #eaedf0;
-  height: 197.6px  ;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .card{
+  height: 100%  ;
 }
 .cart-header {
   margin-top: 10px;

@@ -65,9 +65,12 @@ const Home = () => {
                 />
                 {/* <div className="border-top"></div> */}
                 <Card.Body className="text-center">
+                    <div className="">
+
                   <Card.Title>{item.title}</Card.Title>
                   {/* <Card.Text>{item.description}</Card.Text> */}
                   <Card.Text>ريال {item.price} </Card.Text>
+                    </div>
                   <Button
                     variant="dark"
                     onClick={() => {
