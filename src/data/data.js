@@ -26,7 +26,7 @@ export const data = [
     imgUrl: service1,
     title: "ورق مراسلات",
     description: "الوصف",
-    price: 50,
+    price: 1000,
   },
   {
     id: 2,
@@ -34,7 +34,7 @@ export const data = [
     imgUrl: service2,
     title: "سيارات الشركة",
     description: "الوصف",
-    price: 50,
+    price: 2500,
   },
   {
     id: 3,
@@ -42,7 +42,7 @@ export const data = [
     imgUrl: service3,
     title: "بروفايل الشركة",
     description: "الوصف",
-    price: 50,
+    price: 14000,
   },
   {
     id: 4,
@@ -50,7 +50,7 @@ export const data = [
     imgUrl: service4,
     title: "اختام",
     description: "الوصف",
-    price: 50,
+    price: 1000,
   },
   {
     id: 5,
@@ -58,15 +58,15 @@ export const data = [
     imgUrl: service5,
     title: "اظرف المراسلات",
     description: "الوصف",
-    price: 50,
+    price: 1000,
   },
   {
     id: 6,
     quantity: 0,
     imgUrl: service6,
-    title: "الشعار",
+    title: "تصميم شعار",
     description: "الوصف",
-    price: 50,
+    price: 10000,
   },
   {
     id: 7,
@@ -74,7 +74,7 @@ export const data = [
     imgUrl: service7,
     title: "بطاقة العمل",
     description: "الوصف",
-    price: 50,
+    price: 500,
   },
   {
     id: 8,
@@ -82,7 +82,7 @@ export const data = [
     imgUrl: service8,
     title: "تصميم موقع الكتروني",
     description: "الوصف",
-    price: 50,
+    price: 15000,
   },
   {
     id: 9,
@@ -90,7 +90,7 @@ export const data = [
     imgUrl: service9,
     title: "رول اب",
     description: "الوصف",
-    price: 50,
+    price: 1000,
   },
   {
     id: 10,
@@ -98,7 +98,7 @@ export const data = [
     imgUrl: service10,
     title: "زي الموظفين",
     description: "الوصف",
-    price: 50,
+    price: 2000,
   },
   {
     id: 11,
@@ -106,7 +106,7 @@ export const data = [
     imgUrl: service11,
     title: "ستكرات داخلية",
     description: "الوصف",
-    price: 50,
+    price: 1000,
   },
   {
     id: 12,
@@ -114,7 +114,7 @@ export const data = [
     imgUrl: service12,
     title: "سندات",
     description: "الوصف",
-    price: 50,
+    price: 1000,
   },
   {
     id: 13,
@@ -122,7 +122,7 @@ export const data = [
     imgUrl: service13,
     title: "صفحات التواصل الاجتماعي",
     description: "الوصف",
-    price: 50,
+    price: 2500,
   },
   {
     id: 14,
@@ -130,7 +130,7 @@ export const data = [
     imgUrl: service14,
     title: "فولدر",
     description: "الوصف",
-    price: 50,
+    price: 1500,
   },
   {
     id: 15,
@@ -138,7 +138,7 @@ export const data = [
     imgUrl: service15,
     title: "كارت الاعمال",
     description: "الوصف",
-    price: 50,
+    price: 1000,
   },
   {
     id: 16,
@@ -146,7 +146,7 @@ export const data = [
     imgUrl: service16,
     title: "لوحة خارجية",
     description: "الوصف",
-    price: 50,
+    price: 1000,
   },
   {
     id: 17,
@@ -154,7 +154,7 @@ export const data = [
     imgUrl: service17,
     title: "مذكرة",
     description: "الوصف",
-    price: 50,
+    price: 1000,
   },
   {
     id: 18,
@@ -162,6 +162,6 @@ export const data = [
     imgUrl: service18,
     title: "هدايا دعائية",
     description: "الوصف",
-    price: 50,
+    price: 3000,
   },
 ];
