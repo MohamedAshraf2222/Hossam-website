@@ -6,7 +6,7 @@ import { data } from "../data/data.js";
 const Home = () => {
   const [allData, setAllData] = useState([]);
 
-  const { SaveItems, TotalPrice, totalPrice, SetItem, bagItems } =
+  const { SaveItems, TotalPrice, totalPrice, SetItem, bagItems, DeleteItem } =
     useContext(BagItemsContext);
   useEffect(() => {
     if (localStorage.getItem("BagItems")) {
@@ -24,6 +24,8 @@ const Home = () => {
     <>
       <NavbarCo />
       <Container fluid="" className="">
+        <h2 className="intro-heading">التعريف بالشركة</h2>
+        <p className="intro-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem dolor omnis quaerat voluptates sunt dolores eaque, vero veritatis assumenda accusantium ea sed explicabo esse quae ad debitis nam sequi recusandae maiores provident quos facere nulla doloribus. Atque libero consequuntur, eveniet incidunt sunt deserunt, esse quibusdam ipsam minus architecto, ab a!</p>
         <div className="d-flex my-4 flex-wrap gap-4 justify-content-center my-3">
           {allData.map((item, i) => (
             <Col
@@ -42,7 +44,7 @@ const Home = () => {
                   src={item.imgUrl}
                 />
                 {/* <div className="border-top"></div> */}
-                <Card.Body>
+                <Card.Body className="text-center">
                   <Card.Title>{item.title}</Card.Title>
                   {/* <Card.Text>{item.description}</Card.Text> */}
                   <Card.Text>ريال {item.price} </Card.Text>
@@ -52,20 +54,20 @@ const Home = () => {
                       SetItem(item.id);
                       TotalPrice();
                     }}
-                    className="d-flex mt-4 m-auto gap-2 justify-content-center align-items-center "
+                    className="btn-animation d-flex mt-4 m-auto gap-2 justify-content-center align-items-center "
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="16"
                       height="16"
                       fill="currentColor"
-                      class="bi bi-cart"
+                      className="bi bi-cart"
                       viewBox="0 0 16 16"
                     >
                       {" "}
                       <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />{" "}
                     </svg>
-                    اضافة الي السلة
+                    شراء الخدمة
                   </Button>
                 </Card.Body>
               </Card>
@@ -84,25 +86,35 @@ const Home = () => {
               width="40"
               height="40"
               fill="black"
-              class="bi bi-cart"
+              className="bi bi-cart"
               viewBox="0 0 16 16"
             >
               {" "}
               <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />{" "}
             </svg>
           </h2>
-          {bagItems && (
+          {bagItems.length > 0 && (
             <>
               <Row className="border-bottom">
                 <Col className="calculator-heading">المنتج</Col>
                 <Col className="calculator-heading">الكمية</Col>
                 <Col className="calculator-heading">السعر</Col>
+                <Col className="calculator-heading">حذف</Col>
               </Row>
               {bagItems.map((item, i) => (
                 <Row className="calculator-details" key={i}>
                   <Col className="calculator-text">{item.title}</Col>
                   <Col className="calculator-text">{item.quantity}</Col>
                   <Col className="calculator-text">{item.price} ريال</Col>
+                  <Col className="calculator-text">
+                    <Button
+                      className="delete-btn"
+                      onClick={() => DeleteItem(item.id)}
+                      variant="danger"
+                    >
+                      حذف
+                    </Button>
+                  </Col>
                   {/* <p className="cart-text">
                   {item.title} = {item.price}
                 </p>
@@ -111,10 +123,13 @@ const Home = () => {
               ))}
             </>
           )}
-
-          <Row className="total-price-text border-top">
-            مجموع الفاتورة : {totalPrice} &nbsp; ريال
-          </Row>
+          {bagItems.length > 0 ? (
+            <Row className="total-price-text border-top">
+              مجموع الفاتورة : {totalPrice} &nbsp; ريال
+            </Row>
+          ) : (
+            <h2 className="text-center my-5">لا يوجد خدمات مختارة</h2>
+          )}
         </Container>
       </div>
     </>

@@ -7,7 +7,7 @@ const NavbarCo = () => {
     <>
       <Row>
         <Navbar className="nav-style" bg="light" expand="lg" variant="dark">
-          <Container>
+          <Container className="justify-content-center">
             {/* <Link to="/"> */}
               <Navbar.Brand className="nav-font" href="#">
                 <img className="logo" src={logo} alt="" />
