@@ -4,7 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
-  font-family: "Almarai", sans-serif !important;
+  font-family: 'Tajawal', sans-serif !important;
 }
 
 ::-webkit-scrollbar {
@@ -113,9 +113,9 @@
 } */
 .btn-animation{
   position: relative;
-  /* background-color: black;
-  border-radius: 4em;
-  font-size: 16px; */
+  background-color: #255066;
+  /* border-radius: 4em; */
+  /* font-size: 16px; */
   /* color: white; */
   /* padding: 0.8em 1.8em; */
   /* cursor:pointer; */
@@ -129,7 +129,7 @@
 
 .btn-animation:hover {
   transition-duration: 0.1s;
-  background-color: #3A3A3A;
+  background-color: #346984;
 }
 
 .btn-animation:after {
