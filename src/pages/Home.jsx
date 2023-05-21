@@ -41,9 +41,11 @@ const Home = () => {
         <p className="text-center intro-text">شركة جرهرة العربي للصناعة</p>
         <p className="text-center intro-text">عناية السيد علاء يوسف باشنفر</p>
 
-        <div className="d-flex my-4 flex-wrap gap-4 justify-content-center my-3">
+        <div className="d-flex my-4 flex-wrap gap-4 justify-content-center my-3 overflow-hidden">
           {allData.map((item, i) => (
             <Col
+            data-aos="fade-up"
+            data-aos-duration="2000"
               className={"card-wrapper"}
               key={i}
               xs="10"
@@ -105,7 +107,7 @@ const Home = () => {
         </div>
       </Container>
       {/* Bag */}
-      <div className="bag-background">
+      <div  className="bag-background">
         <Container>
           <h2 className="cart-header">
             السلة{" "}
@@ -130,7 +132,9 @@ const Home = () => {
                 <Col className="calculator-heading">حذف</Col>
               </Row>
               {bagItems.map((item, i) => (
-                <Row className="calculator-details" key={i}>
+                <div>
+
+                <Row  className="calculator-details" key={i}>
                   <Col className="calculator-text">{item.title}</Col>
                   {/* <Col className="calculator-text">{item.quantity}</Col> */}
                   <Col className="calculator-text">{item.price} ريال</Col>
@@ -139,15 +143,16 @@ const Home = () => {
                       className="delete-btn"
                       onClick={() => DeleteItem(item.id)}
                       variant="danger"
-                    >
+                      >
                       حذف
                     </Button>
                   </Col>
                   {/* <p className="cart-text">
                   {item.title} = {item.price}
-                </p>
+                  </p>
                 <p className="cart-text">{item.quantity} = العدد</p> */}
                 </Row>
+                </div>
               ))}
             </>
           )}
